@@ -1,0 +1,19 @@
+<% @users.each do | user | %>
+<% if user.followed_by?(current_user) %>
+  <div id="main">
+      <div class="card">
+        <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title"><%= user.name %></h4>
+          <p class="card-text"><%= user.bio %></p>
+        <% unless current_user == user %>
+          <%= link_to 'Send message', new_message_path(to: user.id), class: 'btn btn-default btn-sm' %>
+              <%= form_tag unfollow_path(user_id: user.id), method: :post, remote: true do %>
+              <%= button_tag 'unfollow', class: 'btn btn-primary' %>
+          <% end %>
+        <% end %>
+        </div>
+      </div>
+  </div>
+  <% end %>
+<% end %>

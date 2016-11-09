@@ -1,0 +1,14 @@
+<% @users.each do | user | %>
+<div id="main">
+    <div class="card">
+      <img class="card-img-top" src="http://placehold.it/350x150" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title"><%= user.name %></h4>
+        <p class="card-text"><%= user.bio %></p>
+      <% unless current_user == user %>
+        <button>Message</button>
+      <% end %>
+      </div>
+    </div>
+</div>
+<% end %>

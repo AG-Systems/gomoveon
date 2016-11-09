@@ -3,6 +3,18 @@
 @import 'chosen';
 @import 'image-select';
 
+#main
+{
+    margin: 0 auto;
+    max-width: 350px;
+}
+.navbar
+{
+  border-radius: none;
+  border: none;
+}
+
+
 .messages {
   max-height: 400px;
   overflow-y: auto;
@@ -16,9 +28,4 @@
 
 .alert-alert {
   @extend .alert-warning;
-}
-
-footer {
-  margin-top: 2em;
-  clear: both;
 }

@@ -9,7 +9,7 @@ gem 'thin'
 
 gem 'bootstrap-sass'
 gem 'bootstrap-will_paginate'
-
+gem "acts_as_follower"
 gem "mailboxer"
 
 gem 'will_paginate'
